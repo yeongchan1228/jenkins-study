@@ -117,7 +117,7 @@ pipeline {
           steps {
             echo 'Build Backend'
 
-            sh 'docker build -t server'
+            sh 'docker build -t server .'
           }
 
           post {
