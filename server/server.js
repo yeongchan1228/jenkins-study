@@ -4,6 +4,7 @@ const port = 80;
 
 app.get('/', (req, res) => {
     res.send(200);
+
 });
 
 app.listen(port, () => {
