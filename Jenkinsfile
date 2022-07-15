@@ -134,7 +134,7 @@ pipeline {
             echo 'Build Backend'
 
 // docker rm -f $(docker ps -aq) 도커 컨테이너가 실행 중이면 추가해야 함
-            sh 'doceker run -p 80:80 -d server'
+            sh 'docker run -p 80:80 -d server'
           }
 
         //   post {
