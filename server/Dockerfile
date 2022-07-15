@@ -1,14 +1,13 @@
 FROM node
 
-WORKDIR /
+WORKDIR /app
 
-COPY . /
+COPY package*.json .
 
-ARG env
-ENV APP_ENV=$env 
 RUN npm install
-RUN npm run build
+
+COPY . .
 
 EXPOSE 80
 
-CMD [ "node","./dist/index.js" ]
+CMD [ "node", "run", "start" ]
