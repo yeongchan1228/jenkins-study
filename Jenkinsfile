@@ -117,11 +117,7 @@ pipeline {
           steps {
             echo 'Build Backend'
 
-            dir ('./server'){
-                sh """
-                docker build . -t server
-                """
-            }
+            sh 'docker build -t server'
           }
 
           post {
@@ -138,11 +134,7 @@ pipeline {
             echo 'Build Backend'
 
 // docker rm -f $(docker ps -aq) 도커 컨테이너가 실행 중이면 추가해야 함
-            dir ('./server'){
-                sh '''
-                docker run -p 80:80 -d server
-                '''
-            }
+            sh 'doceker run -p 80:80 -d server'
           }
 
         //   post {
