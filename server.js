@@ -3,10 +3,9 @@ const app = express();
 const port = 80;
 
 app.get('/', (req, res) => {
-    res.send(200);
+    res.send('Hello World');
 
 });
 
 app.listen(port, () => {
-    console.log('listening...');
 });
